@@ -1,7 +1,7 @@
 {
   "telemetry": {
     "enabled": true,
-    "target": "local",
+    "target": "gcp",
     "outfile": ".logging/log.jsonl",
     "logPrompts": true
   }
