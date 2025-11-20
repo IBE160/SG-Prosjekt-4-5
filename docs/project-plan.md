@@ -2,13 +2,14 @@
 
 ## Fase 0
 
+- [ ] /run-agent-task analyst *workflow-init
 - [ ] Brainstorming
-  - [ ] /analyst *brainstorm "Root Cause Analysis and Solution Design for Player Inactivity"
-  - [ ] /analyst *brainstorm "User Flow Deviations & Edge Cases"
-- [ ] Research
-  - [ ] /analyst *research "Which AI library should we use for orchestrating LLM interactions?"
+  - [ ] /run-agent-task analyst *brainstorm "Root Cause Analysis and Solution Design for Player Inactivity"
+  - [ ] /run-agent-task analyst *brainstorm "User Flow Deviations & Edge Cases"
+- [ ] Research/
+  - [ ] /run-agent-task analyst *research "Which AI library should we use for orchestrating LLM interactions?"
 - [ ] Product Brief
-  - [ ] /analyst *product-brief "Read the two brainstorming sessions the research session and the @proposal.md file, and create a product brief for the project."
+  - [ ] /run-agent-task analyst *product-brief "Read the two brainstorming sessions the research session and the @proposal.md file, and create a product brief for the project."
 
 ## Fase 1
 
@@ -17,15 +18,15 @@
   - [ ] /run-agent-task pm *validate-prd
   - [ ] /run-agent-task ux-designer *create-ux-design {prompt / user-input-file}
   - [ ] /run-agent-task ux-designer *validate-ux-design {prompt / user-input-file}
-  - [ ] /run-agent-task tea *framework {prompt / user-input-file}
-  - [ ] /run-agent-task tea *ci {prompt / user-input-file}
-  - [ ] /run-agent-task tea *test-design {prompt / user-input-file}
 
 ## Fase 2
 
 - [ ] Solutioning
   - [ ] /run-agent-task architect *architecture {prompt / user-input-file}
   - [ ] /run-agent-task architect *validate-architecture {prompt / user-input-file}
+  - [ ] /run-agent-task tea *framework {prompt / user-input-file}
+  - [ ] /run-agent-task tea *ci {prompt / user-input-file}
+  - [ ] /run-agent-task tea *test-design {prompt / user-input-file}
 
 ## Fase 3
 
