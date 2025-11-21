@@ -1,0 +1,11 @@
+installation:
+  version: 6.0.0-alpha.12
+  installDate: '2025-11-21T11:01:16.613Z'
+  lastUpdated: '2025-11-21T11:01:16.613Z'
+modules:
+  - core
+  - bmm
+  - cis
+ides:
+  - claude-code
+  - gemini
