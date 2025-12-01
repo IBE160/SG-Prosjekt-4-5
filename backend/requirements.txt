@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+sqlalchemy
+python-jose[cryptography]
+passlib[bcrypt]
+pdfplumber
+python-multipart
+pydantic-settings
+python-dotenv
+transformers
+torch
+aiosqlite
+psycopg2-binary

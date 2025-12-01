@@ -1,0 +1,266 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #2f6fcd;
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Ytre “mobilramme” – bare for å få app-feel */
+    .phone-frame {
+      width: 390px;
+      height: 844px;
+      border-radius: 32px;
+      background: #2f6fcd;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+      position: relative;
+      overflow: hidden;
+      padding: 24px 24px 32px 24px;
+    }
+
+    /* Lys, akademisk bakgrunn med ikoner */
+    .phone-frame::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0.12;
+      background-image:
+        url("data:image/svg+xml,%3Csvg width='400' height='400' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M40 60 l18 -10 l18 10 v16 h-36 z'/%3E%3Cpath d='M250 70 h30 v22 h-30 z m5 -6 h20'/%3E%3Ccircle cx='320' cy='90' r='16'/%3E%3Cpath d='M80 260 h40 v26 h-40 z m8 -10 h24'/%3E%3Cpath d='M300 280 l0 -18 l14 -8 l14 8 v18 l-14 8 z'/%3E%3Cpath d='M70 340 h40 v22 h-40 z m0 10 h40'/%3E%3C/g%3E%3Csvg%3E");
+      background-size: 260px 260px;
+      background-repeat: repeat;
+      pointer-events: none;
+    }
+
+    .content {
+      position: relative; /* over bakgrunns-ikonene */
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Topplinje med logo øverst til venstre */
+    .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 60px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 12px;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Enkel “graduation cap” laget med CSS */
+    .logo-icon::before {
+      content: "";
+      position: absolute;
+      width: 26px;
+      height: 16px;
+      background: #2f6fcd;
+      transform: skewX(-15deg);
+      top: 9px;
+      border-radius: 3px;
+    }
+
+    .logo-icon::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 10px;
+      background: #2f6fcd;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(9px);
+    }
+
+    .logo-text {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    /* Midt-innhold: tagline + login-kort */
+    .main-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-text {
+      text-align: center;
+      margin-bottom: 32px;
+      max-width: 260px;
+    }
+
+    .hero-text h1 {
+      font-size: 26px;
+      line-height: 1.25;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .hero-text p {
+      font-size: 14px;
+      line-height: 1.5;
+      opacity: 0.9;
+    }
+
+    .login-card {
+      width: 100%;
+      max-width: 320px;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 22px 20px 18px 20px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.20);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .form-label {
+      font-size: 12px;
+      font-weight: 500;
+      color: #47628d;
+    }
+
+    .input-wrapper {
+      display: flex;
+      align-items: center;
+      border-radius: 12px;
+      border: 1px solid #e2e6f0;
+      padding: 8px 10px;
+      background: #f7f8fc;
+    }
+
+    .input-icon {
+      font-size: 14px;
+      margin-right: 8px;
+      opacity: 0.6;
+    }
+
+    .input-field {
+      border: none;
+      outline: none;
+      background: transparent;
+      flex: 1;
+      font-size: 14px;
+      color: #1c274c;
+    }
+
+    .input-field::placeholder {
+      color: #9aa3bc;
+    }
+
+    .login-button {
+      margin-top: 10px;
+      border: none;
+      outline: none;
+      border-radius: 14px;
+      padding: 10px 14px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      background: #2f6fcd;
+      color: #ffffff;
+      transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.15s ease;
+      box-shadow: 0 8px 18px rgba(47, 111, 205, 0.55);
+    }
+
+    .login-button:hover {
+      background: #285fb0;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 22px rgba(47, 111, 205, 0.70);
+    }
+
+    .login-button:active {
+      transform: translateY(1px);
+      box-shadow: 0 4px 10px rgba(47, 111, 205, 0.50);
+    }
+
+    .forgot-password {
+      margin-top: 8px;
+      text-align: center;
+      font-size: 12px;
+      color: #2f6fcd;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .forgot-password:hover {
+      text-decoration: underline;
+    }
+
+    /* Liten “footer”-tekst (valgfritt) */
+    .helper-text {
+      margin-top: 18px;
+      font-size: 11px;
+      text-align: center;
+      opacity: 0.75;
+    }
+
+    @media (max-width: 420px) {
+      body {
+        box-shadow: none;
+      }
+      .phone-frame {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+      }
+    }
+
+    /* Custom styles for error message and signup link */
+    .error-message {
+      color: #ff6b6b; /* A soft red */
+      font-size: 13px;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .signup-prompt {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #ffffff;
+      opacity: 0.8;
+    }
+
+    .signup-link {
+      color: #2f6fcd; /* Match the primary blue */
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .signup-link:hover {
+      text-decoration: underline;
+    }
